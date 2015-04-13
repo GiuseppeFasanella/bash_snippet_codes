@@ -17,3 +17,11 @@ do
     echo -e "\e[1;3"$i"m I can see a raibow \e[0m "
 done
 
+# you must execute the script (chmod +x color_echo.sh), because if you source it, any exit statement will close the terminal
+# Reason is, when you execute a script a subshell is spawned (deporre per uova di anfibi).
+# If you source the script you're running on the very same shell and with exit you're going to close it
+
+exit 0
+
+#The access the statement "echo $?" and you'll know the exit statement of the last process
+
