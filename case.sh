@@ -1,11 +1,9 @@
-#! /bin/bash 
-
 case $1 in 
-    "directory")
-	find /etc -maxdepth 1 -type d
+    "first case")
+
 	;;
-    "link")
-	find /etc -maxdepth 1 -type l
+    "second case")
+
 	;;
      *) # This is like else
 	echo "I don't know what to do"
