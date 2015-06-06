@@ -1,5 +1,10 @@
 #! /bin/bash
 
+##The parsed file is something like:
+##Bob Brown,Manager,098,Main
+##Sally Seaforth,Director,890,Home
+##Jack Spratt,Operator,21321,Factory
+
 #IFS is the current Input File Separator
 OLDIFS=$IFS
 #In my case the separator is the comma
