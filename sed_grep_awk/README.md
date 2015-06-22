@@ -16,7 +16,7 @@ ciao, amico, Roma
 
 da terminale:
 
-* grep "ciao" test.dat | cut -f1 -d\, 
+#### grep "ciao" test.dat | cut -f1 -d\, 
 
 (cioe' vuoi prendere solo le righe che contengono "ciao" e tagliare la colonna 1 (field 1) identificata dal separatore "," (d sta per delimiter). Se non specificato il delimiter e' lo spazio vuoto)
 
