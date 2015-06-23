@@ -25,5 +25,5 @@ da terminale:
 (Vuoi i campi 1 e 3)
 
 
-**awk** serve per selezionare specifiche colonne di testo (puo' essere fatto anche con `cut -f x` cioe' seleziona la colonna x) 
+**awk** serve per selezionare specifiche colonne di testo (puo' essere fatto anche con `cut -f x` cioe' seleziona la colonna x). Usa awk [cosi'] (https://github.com/GiuseppeFasanella/bash_snippet_codes/blob/master/sed_grep_awk/awk.md)
 
