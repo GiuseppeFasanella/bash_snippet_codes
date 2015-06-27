@@ -8,3 +8,6 @@ then
 else
  
 fi
+
+## Se invece vuoi scrivere tutto su una riga sola, vanno usati i ;
+if [[ $1 = "ciao" ]];then echo "ciao";fi
