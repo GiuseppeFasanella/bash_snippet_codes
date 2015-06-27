@@ -7,10 +7,10 @@ usage(){
     echo " --File arg (config file also)   "
 }
 # put a colon if you want to pass and argument                                                                                                                                   
-if ! options=$(getopt -u -o hf: -l help,File:,force -- "$@")
+if ! options=$(getopt -u -o hf: -l help,File: -- "$@")
 # short option h and f ( f requires an argument)                                                                                                                                 
 # long options help and File (File requires and argument)                                                                                                                        
-# I don't know what force means, but I know that without force, the parsing goes wrong                                                                                           
+# I don't know what -- "$@" means, but I know that without it, the parsing goes wrong                                                                                           
 
 then
     # something went wrong, getopt will put out an error message for us                                                                                                          
