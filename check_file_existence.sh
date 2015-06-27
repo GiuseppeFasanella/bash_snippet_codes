@@ -5,6 +5,10 @@ done
 
 FILE TEXT OPERATORS IN BASH
 
+check if file not empty:
+    
+    if [-s file]
+
        -b FILE
               FILE exists and is block special
        -c FILE
