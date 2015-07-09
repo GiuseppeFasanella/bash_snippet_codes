@@ -1,5 +1,11 @@
 # Sed sui file
 
+Noto subito che l'apicetto deve essere dritto: cioe' `'` e NON \`, mentre il forward slash `/` puo' essere anche sostituito con `|` 
+
+Gli usi fondamentali di sed sono:
+
+**sostituzione di parole/lettere**
+
 sed 's/day/night/' file > file_2
 
 (In questo modo viene sostituita solo la prima occorrenza (per ogni riga) di day con night)
@@ -9,6 +15,8 @@ sed 's/day/night/g' file >file_2
 (g sta per globally: tutte le occorrenze, nella riga, di day)
 
 sed 's/day/night/' file
+
+**rimozione di righe contenenti particolari parole**
 
 stampa a schermo come sarà il file, ma non lo modifica
 
@@ -21,6 +29,12 @@ l'opzione -i riscrive sullo stesso file
 sed '/day/d' file
 
 stampa a schermo come verrebbe file dopo la rimozione
+
+* Puoi anche eseguire piu' sostituzioni in una singola istruzione aggiungendo un `;` tra una istruzione e la successiva
+
+sed 's/^d/k/;s/^s/d/;'
+
+Sostituisce una d a inizio riga con una k e una s a inizio riga con una d
 
 # Sed sulle stringhe
 
