@@ -1,6 +1,6 @@
 **sed** serve per manipolare le parole all'interno dei file
 
-Usa sed [cosi'] (https://github.com/GiuseppeFasanella/bash_snippet_codes/blob/master/Sed_awk/sed.md)
+Usa sed [cosi'] (https://github.com/GiuseppeFasanella/bash_snippet_codes/blob/master/sed_grep_awk/sed.md)
 
 **grep** serve per selezionare specifiche righe che matchiano dei criteri di ricerca
 
