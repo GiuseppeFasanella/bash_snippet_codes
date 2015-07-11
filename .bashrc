@@ -15,14 +15,9 @@ if [ -d "/afs/cern.ch/cms/slc5_amd64_gcc434/external/boost/1.47.0/lib" ] ; then
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH":/afs/cern.ch/cms/slc5_amd64_gcc434/external/boost/1.47.0/lib"
 fi
 
-##my function      
-connect() {
-if [[ $1 = "" ]]
-then
-    ssh -Y gfasanel@lxplus6.cern.ch
-else
-    ssh -Y gfasanel@lxplus$1.cern.ch
-fi
+##my function     
+function connect() {
+if [[ $1 = "" ]]; then ssh -Y gfasanel@lxplus6.cern.ch; else ssh -Y gfasanel@lxplus$1.cern.ch; fi
 }
 
 # User specific aliases                                                                                                                                            
