@@ -15,10 +15,14 @@ if [ -d "/afs/cern.ch/cms/slc5_amd64_gcc434/external/boost/1.47.0/lib" ] ; then
     export LD_LIBRARY_PATH=$LD_LIBRARY_PATH":/afs/cern.ch/cms/slc5_amd64_gcc434/external/boost/1.47.0/lib"
 fi
 
-##my function                                                                                                                                                                   
+##my function      
 connect() {
-        #usage: connect 0048
+if [[ $1 = "" ]]
+then
+    ssh -Y gfasanel@lxplus6.cern.ch
+else
     ssh -Y gfasanel@lxplus$1.cern.ch
+fi
 }
 
 # User specific aliases                                                                                                                                            
@@ -32,7 +36,7 @@ alias lq='fs lq -human'
 alias proxy='voms-proxy-init --voms cms'
 alias proxy_info='voms-proxy-info --all'
 alias tdr_init='eval `./notes/tdr runtime -sh`'
-alias sshcern='ssh -Y gfasanel@lxplus6.cern.ch'
+alias sshcern=connect
 alias sshm6='ssh -Y gfasanel@m6.iihe.ac.be'
 alias usrconnect='ssh -D 1080 gfasanel@cmsusr.cern.ch'
 alias tunnellxplus='ssh gfasanel@lxplus.cern.ch -L 2224:cmsusr.cern.ch:22'
