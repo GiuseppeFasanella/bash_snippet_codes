@@ -1,6 +1,17 @@
 # Sed sui file
 
-Noto subito che l'apicetto deve essere dritto: cioe' `'` e NON \`, mentre il forward slash `/` puo' essere anche sostituito con `|` 
+Noto subito che l'apicetto deve essere dritto: cioe' `'` e NON \`, mentre il forward slash `/` puo' essere anche sostituito con `|` .
+Su questo punto, va anche detto che se dentro l'espressione di sed c'e' una variabile di bash da espandere, vanno usati gli apici doppi `"`
+
+    file_to_play=$(head -1 list.dat)
+    echo "file to play is " ${file_to_play}
+    sed -i "/${file_to_play}/d" list.dat
+
+Con l'apice singolo NON FUNZIONA IL MALEDETTO!
+
+    sed -i '/${file_to_play}/d' list.dat
+
+**Quindi io direi che e' buona norma usare sempre l'apice doppio e buona notte**
 
 Gli usi fondamentali di sed sono:
 
