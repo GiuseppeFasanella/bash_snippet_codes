@@ -11,7 +11,7 @@ Con l'apice singolo NON FUNZIONA IL MALEDETTO!
 
     sed -i '/${file_to_play}/d' list.dat
 
-**Quindi io direi che e' buona norma usare sempre l'apice doppio e buona notte**
+**Quindi io direi che e' buona norma usare sempre l'apice doppio `"` e buona notte**
 
 Gli usi fondamentali di sed sono:
 
