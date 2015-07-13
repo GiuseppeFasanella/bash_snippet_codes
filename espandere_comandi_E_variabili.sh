@@ -4,5 +4,5 @@
 ###NOTA BENE: quando assegni file_to_play NON lasciare spazio tra =$ perche' altrimenti non funziona!!
 ###Madonna che sintassi pesante bash!
 
-file_to_play=$(head -1 list.dat);
-echo "file to play is" ${file_to_play};
+file_to_play=$(head -1 list.dat); #Espandere un comando $()
+echo "file to play is" ${file_to_play}; #Espandere una variabile ${}
