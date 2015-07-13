@@ -16,9 +16,9 @@ sed 's/day/night/g' file >file_2
 
 sed 's/day/night/' file
 
-**rimozione di righe contenenti particolari parole**
-
 stampa a schermo come sarà il file, ma non lo modifica
+
+**rimozione di righe contenenti particolari parole**
 
 sed -i '/day/d' file
 
