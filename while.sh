@@ -3,6 +3,13 @@ do
     (( COUNT -- ))
 done
 
+## Infinite loops
+while :
+do
+	echo "infinite loops [ hit CTRL+C to stop]"
+done
+##
+
 ###Example 2
 ##Open 4 terminals
 i="0"
