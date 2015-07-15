@@ -16,9 +16,12 @@ ciao, amico, Roma
 
 da terminale:
 
+
 #### grep "ciao" test.dat | cut -f1 -d ',' (lo preferisco a d\)
 
-**Mi raccomando** nello specificare il delimiter (ad esempio uno spazio vuoto) usa l'**apicetto SINGOLO** `-d ' '` NON l'apicetto doppio `-d " "`
+Nello specificare il delimiter (ad esempio uno spazio vuoto) puoi usare l'**apicetto SINGOLO** `-d ' '` o anche l'apicetto doppio `-d " "`
+
+Mi pare si possa usare anche \ ma perche' poi?
 
 #### grep "ciao" test.dat | cut -f1 -d\,
 
