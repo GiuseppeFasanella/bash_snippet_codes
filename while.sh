@@ -3,7 +3,7 @@ do
     (( COUNT -- ))
 done
 
-## Infinite loops
+## Infinite loops => lo spazio dopo while e' importante (?)
 while :
 do
 	echo "infinite loops [ hit CTRL+C to stop]"
