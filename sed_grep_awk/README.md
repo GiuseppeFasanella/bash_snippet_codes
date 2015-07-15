@@ -18,6 +18,8 @@ da terminale:
 
 #### grep "ciao" test.dat | cut -f1 -d ',' (lo preferisco a d\)
 
+**Mi raccomando** nello specificare il delimiter (ad esempio uno spazio vuoto) usa l'**apicetto SINGOLO** `-d ' '` NON l'apicetto doppio `-d " "`
+
 #### grep "ciao" test.dat | cut -f1 -d\,
 
 (cioe' vuoi prendere solo le righe che contengono "ciao" e tagliare la colonna 1 (field 1) identificata dal separatore "," (d sta per delimiter). Se non specificato il delimiter e' lo spazio vuoto)
