@@ -19,8 +19,12 @@ fi
 function connect() {
 if [[ $1 = "" ]]; then ssh -Y gfasanel@lxplus6.cern.ch; else ssh -Y gfasanel@lxplus$1.cern.ch; fi
 }
+function copy_php() {
+if [[ $1 = "" ]]; then echo "you should specify a directory"; else mkdir $1; cp ./index.php $1; fi
+}
 
-# User specific aliases                                                                                                                                            
+# User specific aliases and functions                                                                                                                                           
+alias mkdir_www=copy_php
 alias emacs='emacs -nw'
 alias pwd='pwd -P'
 alias eos.select='eos'
