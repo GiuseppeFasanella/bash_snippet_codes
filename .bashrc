@@ -22,8 +22,14 @@ if [[ $1 = "" ]]; then ssh -Y gfasanel@lxplus6.cern.ch; else ssh -Y gfasanel@lxp
 function copy_php() {
 if [[ $1 = "" ]]; then echo "you should specify a directory"; else mkdir $1; cp ./index.php $1; fi
 }
+function note(){
+#if [[ $1 = "" ]]; then echo "you should specify a number for your note"; else ssh -Y -t gfasanel@lxplus.cern.ch 'source note_pas.sh AN-15-222; bash -l'; fi                    
+if [[ $1 = "" ]]; then echo "you should specify a number for your note"; else ssh -Y -t gfasanel@lxplus.cern.ch "source note_pas.sh '$1'; bash -l"; fi
+}
 
-# User specific aliases and functions                                                                                                                                           
+# User specific aliases and functions 
+alias work_on_note=note
+# call it via "work_on_note AN-15-222"
 alias mkdir_www=copy_php
 alias emacs='emacs -nw'
 alias pwd='pwd -P'
