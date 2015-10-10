@@ -26,6 +26,10 @@ function note(){
 #if [[ $1 = "" ]]; then echo "you should specify a number for your note"; else ssh -Y -t gfasanel@lxplus.cern.ch 'source note_pas.sh AN-15-222; bash -l'; fi                    
 if [[ $1 = "" ]]; then echo "you should specify a number for your note"; else ssh -Y -t gfasanel@lxplus.cern.ch "source note_pas.sh '$1'; bash -l"; fi
 }
+function title_terminal(){
+#mistic code to give a name to a GNOME terminal                                                                                                                                 
+if [[ $1 = "" ]]; then echo "you should specify a name for your terminal"; else PS1="\[\e]0;${1}\a\]\u@\h:\w$ "; fi
+}
 
 # User specific aliases and functions 
 alias work_on_note=note
