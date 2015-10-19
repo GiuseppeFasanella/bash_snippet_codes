@@ -1,13 +1,13 @@
 # Sed sui file
+Ti consiglio subito di usare l'APICE DRITTO E DOPPIO, cioe' `""` e non `'` e nemmeno \`.
 
-Noto subito che l'apicetto deve essere dritto: cioe' `'` e NON \`, mentre il forward slash `/` puo' essere anche sostituito con `|` .
-Su questo punto, va anche detto che se dentro l'espressione di sed c'e' una variabile di bash da espandere, vanno usati gli apici doppi `"`
+Il forward slash `/` puo' essere anche sostituito con `|` .
 
-    file_to_play=$(head -1 list.dat)
-    echo "file to play is " ${file_to_play}
+In generale l'apice singolo va bene, ma se dentro l'espressione di sed c'e' una variabile di bash da espandere, vanno usati gli apici doppi `"`
+
     sed -i "/${file_to_play}/d" list.dat
 
-Con l'apice singolo NON FUNZIONA IL MALEDETTO!
+Ma con l'apice singolo non funzionera' perche' non riesce a gestire il fatto che file_to_play e' una variabile bash da espandere
 
     sed -i '/${file_to_play}/d' list.dat
 
@@ -75,3 +75,9 @@ ciao_
 Puoi anche usare basename invece che echo
 
 var=$(basename $var | sed 's/_//')
+
+Per le regular expression io ho usato questo
+
+http://www.tutorialspoint.com/unix/unix-regular-expressions.html
+
+e mi sono trovato bene
