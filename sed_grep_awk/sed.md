@@ -17,35 +17,47 @@ Gli usi fondamentali di sed sono:
 
 **sostituzione di parole/lettere**
 
-sed 's/day/night/' file > file_2
+sed "s/day/night/" file > file_2
 
 (In questo modo viene sostituita solo la prima occorrenza (per ogni riga) di day con night)
 
-sed 's/day/night/g' file >file_2
+sed "s/day/night/g" file >file_2
 
 (g sta per globally: tutte le occorrenze, nella riga, di day)
 
-sed 's/day/night/' file
+sed "s/day/night/" file
 
 stampa a schermo come sarà il file, ma non lo modifica
 
 **rimozione di righe contenenti particolari parole**
 
-sed -i '/day/d' file
+sed -i "/day/d" file
 
 rimuove le righe che contengono day
 
 l'opzione -i riscrive sullo stesso file
 
-sed '/day/d' file
+sed "/day/d" file
 
 stampa a schermo come verrebbe file dopo la rimozione
 
 * Puoi anche eseguire piu' sostituzioni in una singola istruzione aggiungendo un `;` tra una istruzione e la successiva
 
-sed 's/^d/k/;s/^s/d/;'
+sed "s/^d/k/;s/^s/d/;"
 
 Sostituisce una d a inizio riga con una k e una s a inizio riga con una d
+
+sed "s/[0-9]*/k/" 
+
+#* vuol dire 1 o piu' (o 0 o piu'?) occorrenze del carattere precedentemente specificato nelle parentesi quadre
+
+#quindi un numero in questo caso, viene sostituito con k
+
+Per le regular expression io ho usato questo
+
+http://www.tutorialspoint.com/unix/unix-regular-expressions.html
+
+e mi sono trovato bene
 
 # Sed sulle stringhe
 
@@ -74,10 +86,6 @@ ciao_
 
 Puoi anche usare basename invece che echo
 
-var=$(basename $var | sed 's/_//')
+var=$(basename $var | sed "s/_//")
 
-Per le regular expression io ho usato questo
 
-http://www.tutorialspoint.com/unix/unix-regular-expressions.html
-
-e mi sono trovato bene
