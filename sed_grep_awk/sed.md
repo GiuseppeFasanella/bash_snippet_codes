@@ -15,21 +15,21 @@ Ma con l'apice singolo non funzionera' perche' non riesce a gestire il fatto che
 
 Gli usi fondamentali di sed sono:
 
-**sostituzione di parole/lettere**
-
+**Sostituzione di parole/lettere**
+```
 sed "s/day/night/" file > file_2
-
-(In questo modo viene sostituita solo la prima occorrenza (per ogni riga) di day con night)
-
+#(In questo modo viene sostituita solo la prima occorrenza (per ogni riga) di day con night)
+```
+```
 sed "s/day/night/g" file >file_2
-
-(g sta per globally: tutte le occorrenze, nella riga, di day)
-
+#(g sta per globally: tutte le occorrenze, nella riga, di day)
+```
+```
 sed "s/day/night/" file
+#stampa a schermo come sarà il file, ma non lo modifica
+```
 
-stampa a schermo come sarà il file, ma non lo modifica
-
-**rimozione di righe contenenti particolari parole**
+**Rimozione di righe contenenti particolari parole**
 ```
 sed -i "/day/d" file
 #rimuove le righe che contengono day; l'opzione -i riscrive sullo stesso file
@@ -43,49 +43,39 @@ in passato con la sveglia del raspberry)
 
 * Puoi anche eseguire piu' sostituzioni in una singola istruzione aggiungendo un `;` tra una istruzione e la successiva
 
+**Regular expressions**
+```
 sed "s/^d/k/;s/^s/d/;"
-
-Sostituisce una d a inizio riga con una k e una s a inizio riga con una d
-
+#Sostituisce una d a inizio riga con una k e una s a inizio riga con una d
 sed "s/[0-9]*/k/" 
-
-#* vuol dire 1 o piu' (o 0 o piu'?) occorrenze del carattere precedentemente specificato nelle parentesi quadre
-
+# * vuol dire 1 o piu' (o 0 o piu'?) occorrenze del carattere precedentemente specificato nelle parentesi quadre
 #quindi un numero in questo caso, viene sostituito con k
-
+```
 Per le regular expression io ho usato questo
 
 http://www.tutorialspoint.com/unix/unix-regular-expressions.html
 
 e mi sono trovato bene
 
-# Sed sulle stringhe
-
-Sostituisce solo la prima occorrenza
-
+**Sed sulle stringhe**
+```
 echo "cia_o_" | sed 's/_//'
-
-ciao_
-
-Sostituisce globalmente, tutte le occorrenze
-
+#Sostituisce solo la prima occorrenza
+#Risultato e' ciao_
+```
+```
 echo "cia_o_" | sed 's/_//g'
-
+#Sostituisce globalmente, tutte le occorrenze
 ciao
+```
 
-
-Se vuoi risostituire, fai cosi'
-
+Se vuoi modificare la stringa, puoi usare echo o basename
+```
 var="ciao__"
-
 var=$(echo $var | sed 's/_//')
-
 echo $var
-
 ciao_
-
-Puoi anche usare basename invece che echo
-
+#Puoi anche usare basename invece che echo
 var=$(basename $var | sed "s/_//")
-
+```
 
