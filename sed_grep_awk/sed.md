@@ -30,16 +30,16 @@ sed "s/day/night/" file
 stampa a schermo come sarà il file, ma non lo modifica
 
 **rimozione di righe contenenti particolari parole**
-
+```
 sed -i "/day/d" file
-
-rimuove le righe che contengono day
-
-l'opzione -i riscrive sullo stesso file
-
+#rimuove le righe che contengono day; l'opzione -i riscrive sullo stesso file
+```
+```
 sed "/day/d" file
-
-stampa a schermo come verrebbe file dopo la rimozione
+#stampa a schermo come verrebbe file dopo la rimozione
+```
+* Attento che la rimozione e' greedy, a differenza della sostituzione: TUTTE LE RIGHE che matchano day vengono sostituite, anche quelle che hanno `dayton` per esempio, perche' matchano comunque day (questa cosa mi ha fregato
+in passato con la sveglia del raspberry)
 
 * Puoi anche eseguire piu' sostituzioni in una singola istruzione aggiungendo un `;` tra una istruzione e la successiva
 
