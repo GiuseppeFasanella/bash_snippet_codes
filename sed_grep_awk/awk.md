@@ -1,3 +1,5 @@
+awk serve per selezionare colonne di testo
+
 Supponi di avere un file /tmp/test.dat
 
 `Giuseppe: Fasanella: intellettuale`
