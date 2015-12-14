@@ -5,3 +5,7 @@ do
 done
 
 $i e' un elemento di arrayName
+
+ARRAY=()
+ARRAY+=('foo')
+ARRAY+=('bar')
