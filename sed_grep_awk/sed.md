@@ -22,6 +22,12 @@ sed "s|day|night|" file
 #stampa a schermo come sarà il file, ma non lo modifica
 ```
 
+*E' utilissimo, quando scrivi una tabella in latex sostituire i `_` con `\_`.
+In sed `\` e' un carattere riservato -> ce ne vogliono 3 
+```
+sed -i 's/_/\\\_/g' $file
+You need 3 backslashes when trying to add 1 \; 4 for 2 etc :)
+```
 **Rimozione di righe contenenti particolari parole**
 ```
 sed -i "|day|d" file
