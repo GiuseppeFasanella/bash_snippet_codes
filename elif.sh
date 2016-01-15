@@ -1,4 +1,4 @@
-## Stai MOLTO attento agli spazi prima e dopo le parentesi quadre, altrimenti NON funziona un cazzo
+## Stai MOLTO attento agli spazi prima e dopo le parentesi quadre, come pure lo spazio $1 SPAZIO=SPAZIO"ciao": altrimenti NON funziona un cazzo
 if [[ $1 = "ciao" ]] #comparison between string
 then 
 first instruction #No needs for ; here
