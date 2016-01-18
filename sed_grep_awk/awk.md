@@ -11,11 +11,11 @@ Amilcare: Ponchielli: musicista
 awk -F":" ' { print $1 } ' /tmp/test.dat
 #Seleziona prima e terza colonna
 awk -F":" ' { print $1,$3 } ' /tmp/test.dat
-```
-* Seleziona la prima colonna e mostra i primi 10 risultati
-
+#Seleziona la prima colonna e mostra i primi 10 risultati
 awk -F":" ' NR==1,NR==10{ print $1 } ' /tmp/test.dat
-
+#Sostituire la prima colonna, qualsiasi cosa contenga, con se stessa seguita da _newText
+awk '$1=$1"_newText"'
+```
 ### Crea un report con una grafica migliorata
 
 awk -F":" ' { print length($1),length($3) } ' /tmp/test.dat
