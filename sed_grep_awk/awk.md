@@ -13,8 +13,11 @@ awk -F":" '{print $1}' /tmp/test.dat
 awk -F":" ' {print $1,$3} ' /tmp/test.dat
 #Seleziona la prima colonna e mostra i primi 10 risultati
 awk -F":" ' NR==1,NR==10{ print $1 } ' /tmp/test.dat
-#Sostituire la prima colonna, qualsiasi cosa contenga, con se stessa seguita da _newText
+#Sostituire a schermo la prima colonna, qualsiasi cosa contenga, con se stessa seguita da _newText
 awk '$1=$1"_newText"'
+#Sostituire in un file una particolare colonna
+Quindi, dovresti fare qualcosa del genere
+cat file | awk '{ if ($1 == "d1") {$2 = ""}; print }'
 ```
 ### Crea un report con una grafica migliorata
 
