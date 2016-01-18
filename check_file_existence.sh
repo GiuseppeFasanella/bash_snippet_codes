@@ -3,6 +3,10 @@ do
     echo "Io esisto"
 done
 
+if  [ ! -e /tmp/file1 ] # It checks for the existence of a file
+then
+    echo "file1 non esiste"
+fi
 FILE TEXT OPERATORS IN BASH
 
 check if file not empty:
