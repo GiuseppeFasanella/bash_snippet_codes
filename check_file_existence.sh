@@ -1,7 +1,7 @@
 until  [ -e /tmp/file1 ] 
 # It checks for the existence of a file; 
 #-d se vuoi vedere se una directory esiste
-#attento che se il link e' simbolico, allora devi chiedere -L
+#attento che se il link e' simbolico, allora devi chiedere -L, oppure se non funziona propria usa -d e il path completo
 do
     echo "Io esisto"
 done
