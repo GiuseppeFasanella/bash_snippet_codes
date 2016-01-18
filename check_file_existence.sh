@@ -1,4 +1,7 @@
-until  [ -e /tmp/file1 ] # It checks for the existence of a file; -d se vuoi vedere se una directory esiste
+until  [ -e /tmp/file1 ] 
+# It checks for the existence of a file; 
+#-d se vuoi vedere se una directory esiste
+#attento che se il link e' simbolico, allora devi chiedere -L
 do
     echo "Io esisto"
 done
