@@ -1,19 +1,17 @@
-awk serve per selezionare colonne di testo
+awk serve per selezionare colonne di testo ed eventualmente per sostituirle
 
 Supponi di avere un file /tmp/test.dat
+```
+Giuseppe: Fasanella: intellettuale
+Amilcare: Ponchielli: musicista
+```
 
-`Giuseppe: Fasanella: intellettuale`
-
-`Amilcare: Ponchielli: musicista`
-
-* Seleziona la prima colonna
-
+```
+#Seleziona la prima colonna, specificando che le colonne sono divise dal Field :
 awk -F":" ' { print $1 } ' /tmp/test.dat
-
-* Seleziona prima e terza colonna
-
+#Seleziona prima e terza colonna
 awk -F":" ' { print $1,$3 } ' /tmp/test.dat
-
+```
 * Seleziona la prima colonna e mostra i primi 10 risultati
 
 awk -F":" ' NR==1,NR==10{ print $1 } ' /tmp/test.dat
