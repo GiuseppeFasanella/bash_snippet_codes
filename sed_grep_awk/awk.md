@@ -8,9 +8,9 @@ Amilcare: Ponchielli: musicista
 
 ```
 #Seleziona la prima colonna, specificando che le colonne sono divise dal Field :
-awk -F":" ' { print $1 } ' /tmp/test.dat
+awk -F":" '{print $1}' /tmp/test.dat
 #Seleziona prima e terza colonna
-awk -F":" ' { print $1,$3 } ' /tmp/test.dat
+awk -F":" ' {print $1,$3} ' /tmp/test.dat
 #Seleziona la prima colonna e mostra i primi 10 risultati
 awk -F":" ' NR==1,NR==10{ print $1 } ' /tmp/test.dat
 #Sostituire la prima colonna, qualsiasi cosa contenga, con se stessa seguita da _newText
