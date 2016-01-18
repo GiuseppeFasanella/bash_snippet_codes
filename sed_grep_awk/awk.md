@@ -16,8 +16,10 @@ awk -F":" ' NR==1,NR==10{ print $1 } ' /tmp/test.dat
 #Sostituire a schermo la prima colonna, qualsiasi cosa contenga, con se stessa seguita da _newText
 awk '$1=$1"_newText"'
 #Sostituire in un file una particolare colonna
-Quindi, dovresti fare qualcosa del genere
+Quindi, dovresti fare qualcosa del genere: se la prima colonna e' d1 la seconda colonna viene cancellata
 cat file | awk '{ if ($1 == "d1") {$2 = ""}; print }'
+awk '{ if ($1 == "d1") {$2 = ""}; print }' infile > outfile
+Nota che INFILE e OUTFILE devono essere diversi, se riscrivi sullo stesso file e' un casino
 ```
 ### Crea un report con una grafica migliorata
 
