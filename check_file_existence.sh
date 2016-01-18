@@ -1,4 +1,4 @@
-until  [ -e /tmp/file1 ] # It checks for the existence of a file
+until  [ -e /tmp/file1 ] # It checks for the existence of a file; -d se vuoi vedere se una directory esiste
 do
     echo "Io esisto"
 done
