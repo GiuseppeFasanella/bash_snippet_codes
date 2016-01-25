@@ -76,3 +76,12 @@ ciao_
 var=$(basename $var | sed "s|_||")
 ```
 
+**Script in sed**
+```
+crea sed/tex.sed
+############################
+s|[-]bad| $R9 < 0.94$|
+############################
+
+echo "-bad" | sed -f sed/tex.sed > test.dat
+```
