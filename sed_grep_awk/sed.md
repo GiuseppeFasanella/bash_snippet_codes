@@ -84,4 +84,6 @@ s|[-]bad| $R9 < 0.94$|
 ############################
 
 echo "-bad" | sed -f sed/tex.sed > test.dat
+oppure
+sed -f sed/tex.sed nome_file_da_modificare > reindirizzamento.dat
 ```
