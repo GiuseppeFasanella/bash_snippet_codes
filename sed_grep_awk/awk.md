@@ -20,6 +20,10 @@ Quindi, dovresti fare qualcosa del genere: se la prima colonna e' d1 la seconda 
 cat file | awk '{ if ($1 == "d1") {$2 = ""}; print }'
 awk '{ if ($1 == "d1") {$2 = ""}; print }' infile > outfile
 Nota che INFILE e OUTFILE devono essere diversi, se riscrivi sullo stesso file e' un casino
+
+##Match parziale tra stringhe
+$6 ~ /mplayer/ 
+##Se la sesta colonna contiene "mplayer"
 ```
 ### Crea un report con una grafica migliorata
 
