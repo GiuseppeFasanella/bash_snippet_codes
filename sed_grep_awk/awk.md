@@ -24,6 +24,10 @@ Nota che INFILE e OUTFILE devono essere diversi, se riscrivi sullo stesso file e
 ##Match parziale tra stringhe
 $6 ~ /mplayer/ 
 ##Se la sesta colonna contiene "mplayer"
+
+##Passare variabili bash
+awk -v min=$1 -v hours=$2 '{ if ($3 == "*" && $6 ~ /mplayer/ ) {$1 = min; $2 = hours; print} else {print} }'
+
 ```
 ### Crea un report con una grafica migliorata
 
