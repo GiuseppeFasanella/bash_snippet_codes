@@ -30,6 +30,7 @@ You need 3 backslashes when trying to add 1 \; 4 for 2 etc :)
 ```
 **Rimozione di righe contenenti particolari parole**
 ```
+NON CAPISCO PERCHE' |day|d non funziona --> ho dovuto fare /day/d --> CONTROLLARE!!!
 sed -i "|day|d" file
 #rimuove le righe che contengono day; l'opzione -i riscrive sullo stesso file
 ```
