@@ -38,6 +38,10 @@ sed -i "|day|d" file
 sed "|day|d" file
 #stampa a schermo come verrebbe file dopo la rimozione
 ```
+```
+#rimuovere tutte le righe che NON contengono un certo testo
+sed '/text\|blah/!d' file
+```
 * Attento che la rimozione e' greedy, a differenza della sostituzione: TUTTE LE RIGHE che matchano day vengono sostituite, anche quelle che hanno `dayton` per esempio, perche' matchano comunque day (questa cosa mi ha fregato
 in passato con la sveglia del raspberry)
 
