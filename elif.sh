@@ -8,6 +8,15 @@ then
 else
 fi
 
+Sempre per le stringhe puoi fare anche cosi':
+if [ "$a" = "$b" ]
+
+if [ "$a" != "$b" ]
+
+La pagina di riferimento e' questa:
+
+http://tldp.org/LDP/abs/html/comparison-ops.html
+
 #se vuoi paragonare numeri interi DEVI fare cosi', usando eq
 if [ "$1" -eq "2" ] ||  [ "$1" -eq "3" ]
 then
