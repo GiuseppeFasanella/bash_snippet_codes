@@ -1,5 +1,6 @@
 # Sed sui file
-* Ti consiglio subito di usare l'APICE DRITTO E DOPPIO, cioe' `""` e non `'` e nemmeno \`.
+* Ti consiglio subito di usare l'APICE DRITTO E DOPPIO, cioe' `""` e non `'` e nemmeno \`. L'apice doppio e' utile perche' 
+  nel caso hai una variabile di bash che vuoi espandere dentro sed. Con l'apice singolo non funziona, con il doppio si'.
 
 * L'altro mio consiglio e' di utilizzare `|` e non `/`.
 
