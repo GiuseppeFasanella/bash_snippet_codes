@@ -96,15 +96,27 @@ sed -f sed/tex.sed nome_file_da_modificare > reindirizzamento.dat
 
 Lo script che uso per modificare i miei .tex e' questo:
 
+tex.sed
 ```
 #sed -f tex.sed nome_file_da_modificare > reindirizzamento
-s|a'|à|
-s|E'|È|
-s| e' | è |
-s|che'|ché|
-s|ne'|né|
-s|e'|è|
-s|i'|ì|
-s|o'|ò|
-s|u'|ù|
+s|a'|à|g
+s|E'|È|g
+s| e' | è |g
+s|che'|ché|g
+s|ne'|né|g
+s|e'|è|g
+s|i'|ì|g
+s|o'|ò|g
+s|u'|ù|g
+```
+
+Interfacciato con cleaner_tex.sh:
+```
+for f in `ls *.tex`; do
+    f=$(echo $f | sed 's|.tex||')
+    echo $f
+    sed -f tex.sed ${f}.tex > ${f}_temp.tex
+    #se sei sicuro:                                                                                   
+    #mv ${f}_temp.tex ${f}.tex
+done
 ```
