@@ -98,6 +98,7 @@ Lo script che uso per modificare i miei .tex e' questo:
 
 ```
 #sed -f tex.sed nome_file_da_modificare > reindirizzamento
+s|a'|à|
 s|E'|È|
 s| e' | è |
 s|che'|ché|
