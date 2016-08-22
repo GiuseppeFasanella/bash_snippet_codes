@@ -93,3 +93,17 @@ echo "-bad" | sed -f sed/tex.sed > test.dat
 oppure
 sed -f sed/tex.sed nome_file_da_modificare > reindirizzamento.dat
 ```
+
+Lo script che uso per modificare i miei .tex e' questo:
+
+```
+#sed -f tex.sed nome_file_da_modificare > reindirizzamento
+s|E'|È|
+s| e' | è |
+s|che'|ché|
+s|ne'|né|
+s|e'|è|
+s|i'|ì|
+s|o'|ò|
+s|u'|ù|
+```
