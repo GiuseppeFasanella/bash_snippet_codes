@@ -65,9 +65,12 @@ e voglio che vada in
 scalexxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx L(0.95 - 1.05)
 ```
 Allora dico: cerca L(, poi qualsiasi carattere . ripetuto un numero indefinito di volte * (anche 0) e infine una parentesi chiusa) e sostituiscilo in L(0.95-1.05) 
+
 ``
     grep scale file.txt | sed "s|L(.*)|L(0.95 - 1.05)|g" > tmp/temp.txt
 ``    
+
+
 Per le regular expression io ho usato questo e mi sono trovato bene
 
 http://www.tutorialspoint.com/unix/unix-regular-expressions.html
