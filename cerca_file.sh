@@ -11,3 +11,11 @@ in case any error messages pop up simply send them to /dev/null i.e. simply disc
 ```
 find / -name 'program.c' 2>errors.txt
 ```
+```
+find /home/gfasanel/Scaricati/ -name "*Dumb*"
+/home/gfasanel/Scaricati/Musica/dumbarton/Igor Stravinsky conducts his Dumbarton Oaks Concerto.mp4
+```
+```
+Case insensitive search
+find /home/gfasanel/Scaricati/ -iname "*Dumb*"
+```
