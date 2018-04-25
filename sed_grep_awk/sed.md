@@ -9,6 +9,11 @@ https://github.com/GiuseppeFasanella/bash_snippet_codes/blob/master/sed_grep_awk
 
 Gli usi fondamentali di sed sono:
 
+***Sostituzione di spazi bianchi di lunghezza variabile seguiti da un + con una virgola***
+'''
+sed -r 's/[[:space:]]+/,/g'
+'''
+
 **Sostituzione di parole/lettere**
 ```
 sed "s|day|night|" file > file_2
