@@ -1,4 +1,29 @@
 #! /bin/bash                                                                                                                                                                     
+####### Command line options #########                                                                                                                                                 
+usage(){
+    echo "`basename $0` [options]"
+    echo " --nation (put your favourite nation here)"
+}
+
+while [ $# -gt 0 ]
+do
+    case $1 in
+        -h|--help) usage; exit 0;;
+        -n|--nation) nation=$2; echo "[OPTION] nation = ${nation}";shift;;
+    esac
+    shift
+done
+
+if [[ $nation = "" ]]
+then
+nation="all"
+fi
+#################################### 
+
+
+#########More Complex version which I don't fully understand##############
+
+#! /bin/bash                                                                                                                                                                     
 # ./parser.sh -h (OR) ./parser.sh --help                                                                                                                                         
 # ./parser.sh -f my_file (OR) ./parser.sh --File my_file                                                                                                                         
 usage(){
@@ -6,7 +31,7 @@ usage(){
     echo " -f arg (this is the config file)"
     echo " --File arg (config file also)   "
 }
-# put a colon if you want to pass and argument                                                                                                                                   
+# put a colon if you want to pass an argument                                                                                                                                   
 if ! options=$(getopt -u -o hf: -l help,File: -- "$@")
 # short option h and f ( f requires an argument)                                                                                                                                 
 # long options help and File (File requires and argument)                                                                                                                        
