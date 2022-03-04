@@ -1,3 +1,5 @@
+#### VERSION 1 (my favourite)
+
 #! /bin/bash                                                                                                                                                                     
 ####### Command line options #########                                                                                                                                                 
 usage(){
@@ -31,6 +33,7 @@ usage(){
     echo " -f arg (this is the config file)"
     echo " --File arg (config file also)   "
 }
+##### UPDATE THE FOLLOWING LINE IF YOU CHANGE YOUR OPTIONS!!!
 # put a colon if you want to pass an argument                                                                                                                                   
 if ! options=$(getopt -u -o hf: -l help,File: -- "$@")
 # short option h and f ( f requires an argument)                                                                                                                                 
